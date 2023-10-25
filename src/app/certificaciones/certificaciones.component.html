@@ -1,0 +1,44 @@
+<p >
+  certificaciones works!
+</p>
+<ion-input
+id="nombre-input"
+label="Nombre Certificado"
+labelPlacement="floating"
+fill="solid"
+[(ngModel)]="nombre"
+></ion-input>
+
+<br />
+
+<ion-input
+id="fechaObtencion-input"
+label="Fecha de obtención"
+labelPlacement="floating"
+fill="solid"
+[(ngModel)]="fechaObtencion"
+></ion-input>
+
+<br />
+<ion-input
+id="booleanVencimiento-input"
+label="¿Tiene fecha de vencimiento? (Si/No)"
+labelPlacement="floating"
+fill="solid"
+[(ngModel)]="booleanVencimiento"
+></ion-input>
+
+<br />
+
+<ion-input
+id="fechaVencimiento-input"
+label="Fecha de Vencimiento (Solo si el certificado vence)"
+labelPlacement="floating"
+fill="solid"
+[(ngModel)]="fechaVencimiento"
+></ion-input>
+
+<br />
+<ion-button size="default" (click)="LimpiarDatos()">Limpiar</ion-button>
+<ion-button size="default" (click)="IngresarDatos()">Ingresar</ion-button>
+<ion-button size="default" (click)="ActualizarDatos()">Actualizar</ion-button>

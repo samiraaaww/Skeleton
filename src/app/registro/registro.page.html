@@ -1,0 +1,76 @@
+<ion-content>
+  <div class="wrapper">
+    <div class="logo">
+      Skeleton<span>APP</span>
+    </div>
+    <div class="tag_line">
+      MAKING AN ASSET OWNERSHIP EASY & USE 
+    </div>
+
+    <div class="triangle">
+      <div class="trinagle-bottomright"></div>
+      <div class="trinagle-right"></div>
+    </div>
+    
+    <div class="box">
+      <h2>Crea una cuenta</h2><hr>
+
+      <ion-item>
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-input [(ngModel)]="newUserName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="newContrasena"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Celular</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <div class="btn_div">
+        <button type="submit" class="btn" (click)="createUser()" >SIGNUP</button>
+      </div>
+      <p>O Registrate Con</p>
+
+      <div class="social-login">
+        <div class="facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </div>
+
+        <div class="google">
+          <ion-icon name="logo-google"></ion-icon>
+        </div>
+
+        <div class="instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <p>¿Ya tienes una cuenta?</p>
+
+      <div class="btn_bottom">
+        <button id="signin" type="submit" (click)="enviologin()">SIGN IN</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

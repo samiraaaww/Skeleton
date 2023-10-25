@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <h1>Bienvenido, {{nombreUsuario}}</h1>
+
+  <ion-segment color="primary" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="exp-laboral">
+      <ion-label>Experiencia Laboral</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="certificaciones">
+      <ion-label>Certificaciones</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="mis-datos">
+      <ion-label>Mis Datos</ion-label>
+    </ion-segment-button>
+
+  </ion-segment>
+  <br/>
+
+  <ion-button size="default" (click)="logout()">logout</ion-button>
+
+
+  <br/>
+
+  <app-certificaciones *ngIf= " selectedSegment === 'certificaciones'"></app-certificaciones>
+  <app-laboral *ngIf= " selectedSegment === 'exp-laboral'"></app-laboral>
+  <app-mis-datos *ngIf= " selectedSegment === 'mis-datos'" [nombreUsuario]="nombreUsuario" [contrasena]="contrasena"></app-mis-datos>
+
+</ion-content>

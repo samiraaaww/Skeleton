@@ -1,0 +1,68 @@
+
+<p>
+  mis-datos works!
+</p>
+
+<br />
+    
+    <ion-input
+    id="nombre-input"
+    label="Nombre"
+    labelPlacement="floating"
+    fill="solid"
+    [(ngModel)]="nombre"
+    ></ion-input>
+  
+    <br />
+
+    <ion-input
+    id="apellido-input"
+    label="Apellido"
+    labelPlacement="floating"
+    fill="solid"
+    [(ngModel)]="apellido"
+    ></ion-input>
+  
+    <br />
+
+    <ion-list>
+      <ion-item>
+        <ion-select placeholder="Selecciona un nivel" [(ngModel)]="educacion">
+          <div slot="label">Nivel Educacional</div>
+          <ion-select-option value="Basica">Basica</ion-select-option>
+          <ion-select-option value="Media">Media</ion-select-option>
+          <ion-select-option value="Universitaria">Universitaria</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+  
+    <br />
+    
+    <br />
+    <ion-button size="default" (click)="LimpiarDatos()">Limpiar</ion-button>
+  
+    
+    <br />
+
+    <ion-button size="default" id="alerta">Mostrar</ion-button>
+    <ion-alert trigger="alerta" header="Usuario" subHeader="Su nombre de usuario es:" message="{{nombre}} {{apellido}}" [buttons]="alertButtons"></ion-alert>
+
+    <br />
+
+    <ion-button size="default" (click)="mostrarInputClave = true">Cambiar contraseña</ion-button>
+
+    <div *ngIf="mostrarInputClave">
+      <ion-input type="password" placeholder="Nueva Contraseña" [(ngModel)]="newContrasena"></ion-input>
+      <ion-button size="default" (click)="cambioContrasena()">Guardar contraseña</ion-button>
+    </div>
+    
+    <ion-button size="default"(click)="mostrarInputUser = true">Cambiar nombre de usuario</ion-button>
+    <div *ngIf="mostrarInputUser">
+      <ion-input placeholder="Nuevo Usuario" [(ngModel)]="newNombreUsuario"></ion-input>
+      <ion-button size="default" (click)="cambioUsuario()">Guardar nombre de usuario</ion-button>
+    </div>
+
+    <ion-button size="default" (click)="eliminarCuenta()">Eliminar cuenta</ion-button>
+
+

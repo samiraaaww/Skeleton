@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-button (click)="deleteTable()" expand="full" fill="clear" color="danger">
+  Eliminar tabla de Usuarios
+</ion-button>
+
+<ion-label>Lista de Usuarios:</ion-label>
+<ion-item *ngFor="let user of users()">
+  <ion-checkbox aria-label="label"
+  slot="start"
+  [(ngModel)]="user.active"
+  (ionChange)="cargarUsuarios()"
+  ></ion-checkbox>
+
+  <ion-label>{{user.name}}</ion-label>
+  <ion-label>{{user.contrasena}}</ion-label>
+  
+  <ion-button slot="end" (click)="deleteUser(user.name)"
+  fill="clear" color="danger"> 
+    <ion-icon name="trash" slot="icon-only"></ion-icon>
+</ion-button>
+</ion-item>
+<ion-button (click)="enviologin()">Cerrar sesión</ion-button>
+</ion-content>

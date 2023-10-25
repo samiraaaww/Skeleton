@@ -1,0 +1,55 @@
+<p>
+  experiencia-laboral works!
+</p>
+<ion-input
+id="empresa-input"
+label="Empresa"
+labelPlacement="floating"
+fill="solid"
+[(ngModel)]="empresa"
+></ion-input>
+
+<br />
+
+<ion-input
+id="anoInicio-input"
+label="Año Inicio"
+labelPlacement="floating"
+fill="solid"
+[(ngModel)]="anoInicio"
+></ion-input>
+
+<br />
+<ion-input
+id="actual-input"
+label="¿Es su trabajo Actual? (Si/No)"
+labelPlacement="floating"
+fill="solid"
+[(ngModel)]="trabajoActual"
+></ion-input>
+
+<br />
+
+<ion-input
+id="anoTermino-input"
+label="Año Termino (Solo si ya no trabaja allí)"
+labelPlacement="floating"
+fill="solid"
+[(ngModel)]="anoTermino"
+></ion-input>
+
+<br />
+
+<ion-input
+id="cargo-input"
+label="Cargo"
+labelPlacement="floating"
+fill="solid"
+[(ngModel)]="cargo"
+></ion-input>
+
+<br />
+
+<ion-button size="default" (click)="LimpiarDatos()">Limpiar</ion-button>
+<ion-button size="default" (click)="IngresarDatos()">Ingresar</ion-button>
+<ion-button size="default" (click)="ActualizarDatos()">Actualizar</ion-button>
